@@ -5,7 +5,7 @@
 %%
 "Kharay"    { return TRUE; }
 "Khotay"    { return FALSE; }
-"thev"      { return ASSIGN; }
+"="         { return ASSIGN; }
 "dakhva"    { return PRINT; }
 "+"         { return PLUS; }
 "-"         { return MINUS; }
