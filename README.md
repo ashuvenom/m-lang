@@ -20,15 +20,19 @@ Before starting, ensure the following tools are installed:
 
 ### On Linux (Ubuntu)
 ```bash
+
 sudo apt update
 sudo apt install flex bison gcc git -y
+
 ```
 
 ### On Windows (Using WSL)
 On Windows, use WSL: open PowerShell, run wsl --install, get Ubuntu from Microsoft Store, then in Ubuntu terminal:
 ```bash
+
 sudo apt update
 sudo apt install flex bison gcc git -y
+
 ```
 
 
@@ -39,6 +43,7 @@ brew install flex bison git
 ```
 
 Check if everything’s installed:
+
 ```bash
 flex --version
 bison --version
