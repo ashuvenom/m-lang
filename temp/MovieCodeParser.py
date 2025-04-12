@@ -1,4 +1,4 @@
-# Generated from MarathiCode.g4 by ANTLR 4.13.0
+# Generated from MovieCode.g4 by ANTLR 4.13.0
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -30,9 +30,9 @@ def serializedATN():
         51,53
     ]
 
-class MarathiCodeParser ( Parser ):
+class MovieCodeParser ( Parser ):
 
-    grammarFileName = "MarathiCode.g4"
+    grammarFileName = "MovieCode.g4"
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -87,17 +87,17 @@ class MarathiCodeParser ( Parser ):
             self.parser = parser
 
         def EOF(self):
-            return self.getToken(MarathiCodeParser.EOF, 0)
+            return self.getToken(MovieCodeParser.EOF, 0)
 
         def statement(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MarathiCodeParser.StatementContext)
+                return self.getTypedRuleContexts(MovieCodeParser.StatementContext)
             else:
-                return self.getTypedRuleContext(MarathiCodeParser.StatementContext,i)
+                return self.getTypedRuleContext(MovieCodeParser.StatementContext,i)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_program
+            return MovieCodeParser.RULE_program
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterProgram" ):
@@ -118,7 +118,7 @@ class MarathiCodeParser ( Parser ):
 
     def program(self):
 
-        localctx = MarathiCodeParser.ProgramContext(self, self._ctx, self.state)
+        localctx = MovieCodeParser.ProgramContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_program)
         self._la = 0 # Token type
         try:
@@ -134,7 +134,7 @@ class MarathiCodeParser ( Parser ):
                 _la = self._input.LA(1)
 
             self.state = 18
-            self.match(MarathiCodeParser.EOF)
+            self.match(MovieCodeParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -152,19 +152,19 @@ class MarathiCodeParser ( Parser ):
             self.parser = parser
 
         def variableDecl(self):
-            return self.getTypedRuleContext(MarathiCodeParser.VariableDeclContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.VariableDeclContext,0)
 
 
         def assignStmt(self):
-            return self.getTypedRuleContext(MarathiCodeParser.AssignStmtContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.AssignStmtContext,0)
 
 
         def printStmt(self):
-            return self.getTypedRuleContext(MarathiCodeParser.PrintStmtContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.PrintStmtContext,0)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_statement
+            return MovieCodeParser.RULE_statement
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterStatement" ):
@@ -185,7 +185,7 @@ class MarathiCodeParser ( Parser ):
 
     def statement(self):
 
-        localctx = MarathiCodeParser.StatementContext(self, self._ctx, self.state)
+        localctx = MovieCodeParser.StatementContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_statement)
         try:
             self.state = 23
@@ -226,14 +226,14 @@ class MarathiCodeParser ( Parser ):
             self.parser = parser
 
         def ID(self):
-            return self.getToken(MarathiCodeParser.ID, 0)
+            return self.getToken(MovieCodeParser.ID, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(MarathiCodeParser.ExprContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_variableDecl
+            return MovieCodeParser.RULE_variableDecl
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterVariableDecl" ):
@@ -254,20 +254,20 @@ class MarathiCodeParser ( Parser ):
 
     def variableDecl(self):
 
-        localctx = MarathiCodeParser.VariableDeclContext(self, self._ctx, self.state)
+        localctx = MovieCodeParser.VariableDeclContext(self, self._ctx, self.state)
         self.enterRule(localctx, 4, self.RULE_variableDecl)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 25
-            self.match(MarathiCodeParser.T__0)
+            self.match(MovieCodeParser.T__0)
             self.state = 26
-            self.match(MarathiCodeParser.ID)
+            self.match(MovieCodeParser.ID)
             self.state = 27
-            self.match(MarathiCodeParser.T__1)
+            self.match(MovieCodeParser.T__1)
             self.state = 28
             self.expr(0)
             self.state = 29
-            self.match(MarathiCodeParser.T__2)
+            self.match(MovieCodeParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -285,14 +285,14 @@ class MarathiCodeParser ( Parser ):
             self.parser = parser
 
         def ID(self):
-            return self.getToken(MarathiCodeParser.ID, 0)
+            return self.getToken(MovieCodeParser.ID, 0)
 
         def expr(self):
-            return self.getTypedRuleContext(MarathiCodeParser.ExprContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_assignStmt
+            return MovieCodeParser.RULE_assignStmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterAssignStmt" ):
@@ -313,18 +313,18 @@ class MarathiCodeParser ( Parser ):
 
     def assignStmt(self):
 
-        localctx = MarathiCodeParser.AssignStmtContext(self, self._ctx, self.state)
+        localctx = MovieCodeParser.AssignStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 6, self.RULE_assignStmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 31
-            self.match(MarathiCodeParser.ID)
+            self.match(MovieCodeParser.ID)
             self.state = 32
-            self.match(MarathiCodeParser.T__1)
+            self.match(MovieCodeParser.T__1)
             self.state = 33
             self.expr(0)
             self.state = 34
-            self.match(MarathiCodeParser.T__2)
+            self.match(MovieCodeParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -342,11 +342,11 @@ class MarathiCodeParser ( Parser ):
             self.parser = parser
 
         def expr(self):
-            return self.getTypedRuleContext(MarathiCodeParser.ExprContext,0)
+            return self.getTypedRuleContext(MovieCodeParser.ExprContext,0)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_printStmt
+            return MovieCodeParser.RULE_printStmt
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterPrintStmt" ):
@@ -367,16 +367,16 @@ class MarathiCodeParser ( Parser ):
 
     def printStmt(self):
 
-        localctx = MarathiCodeParser.PrintStmtContext(self, self._ctx, self.state)
+        localctx = MovieCodeParser.PrintStmtContext(self, self._ctx, self.state)
         self.enterRule(localctx, 8, self.RULE_printStmt)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 36
-            self.match(MarathiCodeParser.T__3)
+            self.match(MovieCodeParser.T__3)
             self.state = 37
             self.expr(0)
             self.state = 38
-            self.match(MarathiCodeParser.T__2)
+            self.match(MovieCodeParser.T__2)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -395,20 +395,20 @@ class MarathiCodeParser ( Parser ):
             self.op = None # Token
 
         def INT(self):
-            return self.getToken(MarathiCodeParser.INT, 0)
+            return self.getToken(MovieCodeParser.INT, 0)
 
         def ID(self):
-            return self.getToken(MarathiCodeParser.ID, 0)
+            return self.getToken(MovieCodeParser.ID, 0)
 
         def expr(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MarathiCodeParser.ExprContext)
+                return self.getTypedRuleContexts(MovieCodeParser.ExprContext)
             else:
-                return self.getTypedRuleContext(MarathiCodeParser.ExprContext,i)
+                return self.getTypedRuleContext(MovieCodeParser.ExprContext,i)
 
 
         def getRuleIndex(self):
-            return MarathiCodeParser.RULE_expr
+            return MovieCodeParser.RULE_expr
 
         def enterRule(self, listener:ParseTreeListener):
             if hasattr( listener, "enterExpr" ):
@@ -429,7 +429,7 @@ class MarathiCodeParser ( Parser ):
     def expr(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = MarathiCodeParser.ExprContext(self, self._ctx, _parentState)
+        localctx = MovieCodeParser.ExprContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 10
         self.enterRecursionRule(localctx, 10, self.RULE_expr, _p)
@@ -441,11 +441,11 @@ class MarathiCodeParser ( Parser ):
             token = self._input.LA(1)
             if token in [10]:
                 self.state = 41
-                self.match(MarathiCodeParser.INT)
+                self.match(MovieCodeParser.INT)
                 pass
             elif token in [9]:
                 self.state = 42
-                self.match(MarathiCodeParser.ID)
+                self.match(MovieCodeParser.ID)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -463,7 +463,7 @@ class MarathiCodeParser ( Parser ):
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
                     if la_ == 1:
-                        localctx = MarathiCodeParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = MovieCodeParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 45
                         if not self.precpred(self._ctx, 4):
@@ -482,7 +482,7 @@ class MarathiCodeParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = MarathiCodeParser.ExprContext(self, _parentctx, _parentState)
+                        localctx = MovieCodeParser.ExprContext(self, _parentctx, _parentState)
                         self.pushNewRecursionContext(localctx, _startState, self.RULE_expr)
                         self.state = 48
                         if not self.precpred(self._ctx, 3):

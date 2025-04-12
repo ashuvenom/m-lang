@@ -1,4 +1,4 @@
-# Generated from MarathiCode.g4 by ANTLR 4.13.0
+# Generated from MovieCode.g4 by ANTLR 4.13.0
 from antlr4 import *
 from io import StringIO
 import sys
@@ -34,7 +34,7 @@ def serializedATN():
         1,0,0,0,4,0,49,55,60,1,6,0,0
     ]
 
-class MarathiCodeLexer(Lexer):
+class MovieCodeLexer(Lexer):
 
     atn = ATNDeserializer().deserialize(serializedATN())
 
@@ -65,7 +65,7 @@ class MarathiCodeLexer(Lexer):
     ruleNames = [ "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", 
                   "T__7", "ID", "INT", "WS" ]
 
-    grammarFileName = "MarathiCode.g4"
+    grammarFileName = "MovieCode.g4"
 
     def __init__(self, input=None, output:TextIO = sys.stdout):
         super().__init__(input, output)
