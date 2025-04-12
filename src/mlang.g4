@@ -1,8 +1,4 @@
-<<<<<<<< HEAD:src/MovieCode.g4
-grammar MovieCode;
-========
 grammar mlang;
->>>>>>>> mlang:src/mlang.g4
 
 program: statement* EOF;
 
