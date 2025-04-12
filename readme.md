@@ -1,90 +1,81 @@
-# Movie Language
+# 🎬 mlang
 
-MovieLang is a simple story-teller programming language inspired by cinematic storytelling and Marathi cultural flavor. This language was built as a team project to implement a lexer, parser, and interpreter using ANTLR and Python. It supports core operations like variable declarations, printing, arithmetic, and control flow.
+mlang is a simple, cinematic storytelling-inspired programming language designed to feel like writing a screenplay. Built using ANTLR and Python, mlang supports essential programming features such as variable declarations, arithmetic expressions, print statements, and more — all expressed with a theatrical twist.
 
-## 👨‍💻 Team
+---
+
+
+## 👥 Team Members
 
 - Ashutosh Kumbhar  
 - Rajesh Sawant  
 - Girish Nalawade  
-- Mitesh Parab 
-
-
-## 🧰 Tools Used
-
-- **ANTLR (v4)**: For lexical analysis and parser generation (`MovieCode.g4`)
-- **Python**: Interpreter runtime (`main.py`, `MovieInterpreter.py`)
-- **Git**: Version control
-
-## 🧱 Setup & Installation
-
-### On Linux (Ubuntu)
-
-```bash
-sudo apt update
-
-sudo apt install default-jre python3-pip -y
-
-pip3 install antlr4-tools
-
-pip install antlr4-python3-runtime
-
-```
+- Mitesh Parab  
 
 ---
 
-### On Windows (Powershell)
+## 🛠️ Tools & Technologies
 
-Install WSL on windows
+- 🧠 **ANTLR v4** – Grammar-based lexer and parser generation (`mlang.g4`)
+- 🐍 **Python** – Interpreter and runtime execution (`main.py`, `mlangInterpreter.py`)
+- 🌳 **Graphviz + pydot** – For generating visual parse trees (`sampletree.png`)
+- 💻 **Git** – Version control
+
+---
+
+## 📦 Installation
+
+### 🔁 Requirements
+
+Install ANTLR runtime and related packages:
+
 ```bash
+pip install antlr4-python3-runtime pydot
+
+---
+
+### 🐧 On Linux (Ubuntu)
+
+```bash
+sudo apt update
+sudo apt install default-jre python3-pip -y
+pip install antlr4-python3-runtime
+
+🪟 On Windows (Using WSL)
 wsl --install
-```
-Open Ubuntu terminal and run:
-
-```bash
+# Inside Ubuntu (WSL):
+**Open Ubuntu terminal and run:**
 sudo apt update
-sudo apt install default-jre python3-pip -y
-pip install antlr4-python3-runtime
-```
-
----
-
-### On MacOS (zsh/bash)
-
-Install openjdk and python3
-```bash
-brew install openjdk python3
-pip3 install antlr4-python3-runtime
-```
-
----
-
-## ⚙️ Compilation
-
-```bash
-cd src
-
-#Generate Lexer, Parser, and Visitor in the src folder itself.
-
-java -Xmx500M -cp ".:antlr-4.13.0-complete.jar" org.antlr.v4.Tool -Dlanguage=Python3 -visitor -listener MarathiCode.g4
-
-# This generates 4 files :
-
-# 1. MovieCodeLexer.py
-# 2. MovieCodeParser.py
-# 3. MovieCodeVisitor.py
-# 4. MovieCodeListener.py
-
-```
-
-## ▶️ Running a Program
-
-```bash
-cd src
-python3 main.py ../data/sample.mc
-```
+sudo apt install default-jre python3-pip graphviz -y
+pip install antlr4-python3-runtime pydot
 
 
+🍎 On Mac (Homebrew must be installed)
+brew install openjdk python3 graphviz
+pip3 install antlr4-python3-runtime pydot
 
 
+⚙️ Compilation
 
+cd into src . 
+
+1. Run the below command in :
+wget https://www.antlr.org/download/antlr-4.13.0-complete.jar
+
+or using Curl
+
+curl -O https://www.antlr.org/download/antlr-4.13.0-complete.jar
+
+
+2. Generate Lexer, Parser, and Visitor in the src folder 
+java -Xmx500M -cp "antlr-4.13.0-complete.jar" org.antlr.v4.Tool -Dlanguage=Python3 -visitor -listener mlang.g4 -o .
+
+This generates 4 files :
+
+1. mlangLexer.py
+2. mlangParser.py
+3. mlangVisitor.py
+4. mlangListener.py
+
+▶️ Running a Program
+python3 main.py data/sample.mlang
