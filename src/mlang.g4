@@ -15,7 +15,7 @@ printStmt: 'say' expr ';';
 expr
     : expr op=('*'|'/') expr
     | expr op=('+'|'-') expr
-    | expr op=('and'|'or') expr
+    | expr op=('andAlso'|'orElse') expr
     | 'not' expr
     | BOOL
     | INT

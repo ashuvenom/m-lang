@@ -43,7 +43,7 @@ class mlangParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'cast'", "'is'", "';'", "'say'", "'*'", 
-                     "'/'", "'+'", "'-'", "'and'", "'or'", "'not'" ]
+                     "'/'", "'+'", "'-'", "'andAlso'", "'orElse'", "'not'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 

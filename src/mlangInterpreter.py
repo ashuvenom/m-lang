@@ -37,8 +37,8 @@ class mlangInterpreter(mlangVisitor):
             if ctx.op.text == '-': return left - right
             if ctx.op.text == '*': return left * right
             if ctx.op.text == '/': return left // right
-            if ctx.op.text == 'and': return left and right
-            if ctx.op.text == 'or': return left or right
+            if ctx.op.text == 'andAlso': return left and right
+            if ctx.op.text == 'orElse': return left or right
         elif ctx.getChild(0).getText() == 'not':
             value = self.visit(ctx.expr(0))
             return not value
