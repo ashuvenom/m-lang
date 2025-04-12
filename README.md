@@ -1,90 +1,68 @@
-# MarathiCode
+# MCode
 
-MarathiCode is a simple programming language inspired by Marathi, designed as a team project to implement a lexical analyzer, parser, and runtime environment. The language supports basic operations like assignment, printing, arithmetic, conditionals, loops, and boolean operations with a Marathi flavor.
+MCode is a simple story-teller programming language inspired by cinematic storytelling and Marathi cultural flavor. This language was built as a team project to implement a lexer, parser, and interpreter using ANTLR and Python. It supports core operations like variable declarations, printing, arithmetic, and control flow.
 
-## Team
-- Ashutosh Kumbhar 
-- Rajesh Sawant 
-- Girish Nalawade 
-- Mitesh Parab 
+---
 
-## Tools
-- **Flex**: For lexical analysis (`lexer.l`).
-- **Bison**: For parsing (`parser.y`).
-- **GCC**: For compiling C code.
-- **Git**: For version control.
+## 👨‍💻 Team
 
-## Installation
-Before starting, ensure the following tools are installed:
+- Ashutosh Kumbhar  
+- Rajesh Sawant  
+- Girish Nalawade  
+- Mitesh Parab  
 
+---
 
-### On Linux (Ubuntu)
+## 🧰 Tools Used
+
+- **ANTLR (v4)**: For lexical analysis and parser generation (`MarathiCode.g4`)
+- **Python**: Interpreter runtime (`main.py`, `MarathiInterpreter.py`)
+- **Git**: Version control
+
+---
+
+## 🧱 Installation
+
+Before starting, make sure the required tools are installed:
+
+---
+
+### 🐧 On Linux (Ubuntu)
+
 ```bash
-
 sudo apt update
-sudo apt install flex bison gcc git -y
+sudo apt install default-jre python3-pip -y
+pip install antlr4-python3-runtime
 
-```
+🪟 On Windows (Using WSL)
+wsl --install
 
-### On Windows (Using WSL)
-On Windows, use WSL: open PowerShell, run wsl --install, get Ubuntu from Microsoft Store, then in Ubuntu terminal:
-```bash
-
+**Open Ubuntu terminal and run:**
 sudo apt update
-sudo apt install flex bison gcc git -y
+sudo apt install default-jre python3-pip -y
+pip install antlr4-python3-runtime
 
-```
-
-
-### On Mac 
-On Mac, install Xcode tools with xcode-select --install, then Homebrew with /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", and finally:
-```bash
-brew install flex bison git
-```
-
-Check if everything’s installed:
-
-```bash
-flex --version
-bison --version
-gcc --version
-git --version
-```
-
-## Compilation
-
-Now, compile the project. From the MarathiCode folder, generate the lexer:
-
-```bash
-flex src/lexer.l
-```
-
-This creates src/lex.yy.c. Next, generate the parser:
-
-```bash
-bison -d src/parser.y
-```
-
-This makes src/parser.tab.c and src/parser.tab.h. Then, compile everything:
-```bash
-gcc src/lex.yy.c src/parser.tab.c -o marathi
-```
-
-This builds the marathi executable in src/. Or use one command:
-```bash
-flex src/lexer.l && bison -d src/parser.y && gcc src/lex.yy.c src/parser.tab.c -o marathi
-```
-
-To run a program, like the basic sample:
-```bash
-./marathi < data/sample.marathi
-```
-
-## Project Structure
-
-To Do
+🍎 On Mac (Homebrew must be installed)
+brew install openjdk python3
+pip3 install antlr4-python3-runtime
 
 
+⚙️ Compilation
 
+cd into your main folder structure.. 
 
+1. Run the below command:
+wget https://www.antlr.org/download/antlr-4.13.0-complete.jar
 
+2. Generate Lexer, Parser, and Visitor in the main folder itself
+java -Xmx500M -cp ".:antlr-4.13.0-complete.jar" org.antlr.v4.Tool -Dlanguage=Python3 -visitor -listener MarathiCode.g4
+
+This generates 4 files :
+
+1. MarathiCodeLexer.py
+2. MarathiCodeParser.py
+3. MarathiCodeVisitor.py
+4. MarathiCodeListener.py
+
+▶️ Running a Program
+python3 main.py sample.mc
