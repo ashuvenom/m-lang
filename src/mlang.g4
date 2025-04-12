@@ -1,4 +1,4 @@
-grammar MarathiCode;
+grammar mlang;
 
 program: statement* EOF;
 

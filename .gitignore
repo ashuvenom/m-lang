@@ -1,0 +1,37 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# ANTLR-generated intermediate files
+*.tokens
+*.interp
+
+# ANTLR output 
+# src/mlangLexer.py
+# src/mlangParser.py
+# src/mlangVisitor.py
+# src/mlangListener.py
+
+# MacOS junk
+.DS_Store
+
+# Output images
+#*.png
+
+# Editor/IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# System junk
+Thumbs.db

@@ -1,6 +1,6 @@
-from MarathiCodeVisitor import MarathiCodeVisitor
+from mlangVisitor import mlangVisitor
 
-class MarathiInterpreter(MarathiCodeVisitor):
+class mlangInterpreter(mlangVisitor):
     def __init__(self):
         self.memory = {}
 
