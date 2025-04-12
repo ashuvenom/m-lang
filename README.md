@@ -70,3 +70,30 @@ This generates 4 files :
 
 ▶️ Running a Program
 python3 main.py sample.mc
+
+Project Structure:
+
+Root-Level Files
+
+MarathiCode.g4
+Grammar file written in ANTLR v4 syntax. This defines the lexical and syntactic structure of the Marathi-inspired programming language (MCode).
+
+MarathiCodeLexer.py, MarathiCodeParser.py, MarathiCodeListener.py, MarathiCodeVisitor.py
+Auto-generated Python files created from the .g4 grammar using ANTLR. These form the lexer and parser components.
+
+MarathiInterpreter.py
+Main interpreter implementation. This file walks the parsed tree and executes logic according to the rules defined in MCode.
+
+antlr-4.13.0-complete.jar
+The complete ANTLR v4 tool used to generate lexer/parser code from .g4 grammar.
+
+README.md
+Project documentation explaining motivation, setup instructions, and contribution guide.
+
+Intermediate & Runtime Files
+
+.interp, .tokens Files
+Intermediate files created by ANTLR during the generation process to help with syntax matching.
+
+__pycache__/
+Compiled Python bytecode for performance (automatically created when modules are imported).
