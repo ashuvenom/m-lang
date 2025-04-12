@@ -1,3 +1,27 @@
+#Notes
+
+
+1) Tokenizer -> Flex
+2) Grammer -> EBNF
+3) Parser -> Prolog
+
+
+flex src/tokenizer.l
+
+gcc lex.yy.c -o tokenizer -lfl
+
+
+
+
+
+
+
+
+
+
+
+
+
 # MarathiCode
 
 MarathiCode is a simple programming language inspired by Marathi, designed as a team project to implement a lexical analyzer, parser, and runtime environment. The language supports basic operations like assignment, printing, arithmetic, conditionals, loops, and boolean operations with a Marathi flavor.
