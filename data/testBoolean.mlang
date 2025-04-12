@@ -1,5 +1,6 @@
 cast x is true;
 cast y is false;
-say x and y;  
-say x or y;   
-say not x;   
+
+say x andAlso y;
+say x orElse y;
+say not x;
