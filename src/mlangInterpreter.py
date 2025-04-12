@@ -1,12 +1,6 @@
-<<<<<<<< HEAD:src/MovieInterpreter.py
-from MovieCodeVisitor import MovieCodeVisitor
-
-class MovieInterpreter(MovieCodeVisitor):
-========
 from mlangVisitor import mlangVisitor
 
 class mlangInterpreter(mlangVisitor):
->>>>>>>> mlang:src/mlangInterpreter.py
     def __init__(self):
         self.memory = {}
 
