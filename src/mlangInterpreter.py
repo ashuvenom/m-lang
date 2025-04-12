@@ -25,13 +25,21 @@ class mlangInterpreter(mlangVisitor):
     def visitExpr(self, ctx):
         if ctx.INT():
             return int(ctx.INT().getText())
+        elif ctx.BOOL():
+            return ctx.BOOL().getText() == 'true'
         elif ctx.ID():
             return self.memory.get(ctx.ID().getText(), 0)
         elif ctx.op:
             left = self.visit(ctx.expr(0))
-            right = self.visit(ctx.expr(1))
+            right = self.visit(ctx.expr(1)) if ctx.expr(1) else None
+
             if ctx.op.text == '+': return left + right
             if ctx.op.text == '-': return left - right
             if ctx.op.text == '*': return left * right
             if ctx.op.text == '/': return left // right
+            if ctx.op.text == 'and': return left and right
+            if ctx.op.text == 'or': return left or right
+        elif ctx.getChild(0).getText() == 'not':
+            value = self.visit(ctx.expr(0))
+            return not value
         return 0

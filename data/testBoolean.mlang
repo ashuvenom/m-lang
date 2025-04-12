@@ -1,0 +1,5 @@
+cast x is true;
+cast y is false;
+say x and y;  
+say x or y;   
+say not x;   
