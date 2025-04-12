@@ -25,8 +25,8 @@ MCode is a simple story-teller programming language inspired by cinematic storyt
 
 Before starting, make sure the required tools are installed:
 
-pip install antlr4-tools
-pip install antlr4-python3-runtime
+1. pip install antlr4-tools
+2. pip install antlr4-python3-runtime
 
 
 ---
