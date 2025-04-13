@@ -141,5 +141,3 @@ python3 main.py ../data/sample.mlang
 ```
 
 ---
-
-Let me know if you want to add badges, diagrams, or usage examples!
