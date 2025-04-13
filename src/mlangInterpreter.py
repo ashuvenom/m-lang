@@ -26,7 +26,7 @@ class mlangInterpreter(mlangVisitor):
         if ctx.INT():
             return int(ctx.INT().getText())
         elif ctx.BOOL():
-            return ctx.BOOL().getText() == 'true'
+            return ctx.BOOL().getText() == 'truth'
         elif ctx.ID():
             return self.memory.get(ctx.ID().getText(), 0)
         elif ctx.op:
