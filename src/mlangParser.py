@@ -10,7 +10,7 @@ else:
 
 def serializedATN():
     return [
-        4,1,15,63,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,5,
+        4,1,16,63,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,5,
         0,14,8,0,10,0,12,0,17,9,0,1,0,1,0,1,1,1,1,1,1,3,1,24,8,1,1,2,1,2,
         1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,5,1,5,
         1,5,1,5,1,5,3,5,47,8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,5,5,58,
@@ -48,7 +48,7 @@ class mlangParser ( Parser ):
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "BOOL", "ID", "INT", "WS" ]
+                      "BOOL", "ID", "INT", "WS", "COMMENT" ]
 
     RULE_program = 0
     RULE_statement = 1
@@ -76,6 +76,7 @@ class mlangParser ( Parser ):
     ID=13
     INT=14
     WS=15
+    COMMENT=16
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
