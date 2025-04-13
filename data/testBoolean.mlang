@@ -1,5 +1,5 @@
-cast x is true;
-cast y is false;
+cast x is truth;
+cast y is lie;
 
 say x andAlso y;
 say x orElse y;
