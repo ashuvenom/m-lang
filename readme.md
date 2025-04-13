@@ -32,7 +32,7 @@ What sets it apart is its **narrative-driven syntax**, allowing programmers to c
 
 ---
 
-##Project Structure: `mlang/`
+## Project Structure: `mlang/`
 
 This project is implemented in Python and is structured to support parsing and interpreting a custom programming language using ANTLR.
 
