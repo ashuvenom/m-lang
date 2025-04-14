@@ -16,7 +16,7 @@ expr
     : expr op=('*'|'/'|'%') expr
     | expr op=('+'|'-') expr
     | expr op=('andAlso'|'orElse') expr
-    | expr op=('smallerThan'|'greaterThan'|'greaterThanOrEqualTo'|'lessThanOrEqualTo') expr
+    | expr op=('smallerThan'|'biggerThan'|'biggerOrEqual'|'smallerOrEqual') expr
     | 'not' expr
     | BOOL
     | INT
