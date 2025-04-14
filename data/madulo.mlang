@@ -1,0 +1,3 @@
+cast x is 2;
+cast y is 4;
+say x % y; 
