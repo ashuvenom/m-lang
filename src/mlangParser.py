@@ -45,7 +45,7 @@ class mlangParser ( Parser ):
 
     literalNames = [ "<INVALID>", "'cast'", "'is'", "';'", "'say'", "'*'", 
                      "'/'", "'+'", "'-'", "'andAlso'", "'orElse'", "'smallerThan'", 
-                     "'biggerThan'", "'biggerThanOrEqualTo'", "'smallerThanOrEqualTo'", 
+                     "'biggerThan'", "'biggerOrEqual'", "'smallerOrEqual'", 
                      "'not'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
