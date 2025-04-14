@@ -116,6 +116,60 @@ class mlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mlangParser#functionDecl.
+    def enterFunctionDecl(self, ctx:mlangParser.FunctionDeclContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#functionDecl.
+    def exitFunctionDecl(self, ctx:mlangParser.FunctionDeclContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#functionCall.
+    def enterFunctionCall(self, ctx:mlangParser.FunctionCallContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#functionCall.
+    def exitFunctionCall(self, ctx:mlangParser.FunctionCallContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#functionCallExpr.
+    def enterFunctionCallExpr(self, ctx:mlangParser.FunctionCallExprContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#functionCallExpr.
+    def exitFunctionCallExpr(self, ctx:mlangParser.FunctionCallExprContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#returnStmt.
+    def enterReturnStmt(self, ctx:mlangParser.ReturnStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#returnStmt.
+    def exitReturnStmt(self, ctx:mlangParser.ReturnStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#paramList.
+    def enterParamList(self, ctx:mlangParser.ParamListContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#paramList.
+    def exitParamList(self, ctx:mlangParser.ParamListContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#argList.
+    def enterArgList(self, ctx:mlangParser.ArgListContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#argList.
+    def exitArgList(self, ctx:mlangParser.ArgListContext):
+        pass
+
+
     # Enter a parse tree produced by mlangParser#expr.
     def enterExpr(self, ctx:mlangParser.ExprContext):
         pass
