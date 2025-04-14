@@ -1,0 +1,41 @@
+note: If-Else
+cast hero is 10;
+cast villain is 10;
+
+cutIf hero sameAs villain action
+    say "They are the same!";
+cut
+altCut hero biggerThan villain action
+    say "Hero dominates!";
+cut
+plotTwist action
+    say "Unexpected result.";
+cut
+
+note: If with nested condition
+cast x is 3;
+cutIf x biggerThan 0 action
+    say "Positive";
+    cutIf x sameAs 3 action say "It's three!"; cut
+cut
+
+note: Boolean condition
+cast a is truth;
+cast b is lie;
+cutIf a andAlso not b action say "Logical pass"; cut
+
+note: While loop with pause (break)
+cast i is 0;
+rollWhile i smallerThan 5 action
+    say i;
+    cutIf i sameAs 2 action pause; cut
+    i is i + 1;
+cut
+
+note: For loop with replay (continue)
+montage cast j is 0; j smallerThan 5; j is j + 1; action
+    cutIf j sameAs 2 action
+        replay;
+    cut
+    say j;
+cut

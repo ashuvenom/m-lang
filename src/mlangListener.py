@@ -53,6 +53,69 @@ class mlangListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by mlangParser#ifStmt.
+    def enterIfStmt(self, ctx:mlangParser.IfStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#ifStmt.
+    def exitIfStmt(self, ctx:mlangParser.IfStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#elifStmt.
+    def enterElifStmt(self, ctx:mlangParser.ElifStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#elifStmt.
+    def exitElifStmt(self, ctx:mlangParser.ElifStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#elseStmt.
+    def enterElseStmt(self, ctx:mlangParser.ElseStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#elseStmt.
+    def exitElseStmt(self, ctx:mlangParser.ElseStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#whileStmt.
+    def enterWhileStmt(self, ctx:mlangParser.WhileStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#whileStmt.
+    def exitWhileStmt(self, ctx:mlangParser.WhileStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#forStmt.
+    def enterForStmt(self, ctx:mlangParser.ForStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#forStmt.
+    def exitForStmt(self, ctx:mlangParser.ForStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#breakStmt.
+    def enterBreakStmt(self, ctx:mlangParser.BreakStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#breakStmt.
+    def exitBreakStmt(self, ctx:mlangParser.BreakStmtContext):
+        pass
+
+
+    # Enter a parse tree produced by mlangParser#continueStmt.
+    def enterContinueStmt(self, ctx:mlangParser.ContinueStmtContext):
+        pass
+
+    # Exit a parse tree produced by mlangParser#continueStmt.
+    def exitContinueStmt(self, ctx:mlangParser.ContinueStmtContext):
+        pass
+
+
     # Enter a parse tree produced by mlangParser#expr.
     def enterExpr(self, ctx:mlangParser.ExprContext):
         pass
