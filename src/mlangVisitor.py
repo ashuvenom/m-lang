@@ -34,6 +34,41 @@ class mlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mlangParser#ifStmt.
+    def visitIfStmt(self, ctx:mlangParser.IfStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#elifStmt.
+    def visitElifStmt(self, ctx:mlangParser.ElifStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#elseStmt.
+    def visitElseStmt(self, ctx:mlangParser.ElseStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#whileStmt.
+    def visitWhileStmt(self, ctx:mlangParser.WhileStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#forStmt.
+    def visitForStmt(self, ctx:mlangParser.ForStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#breakStmt.
+    def visitBreakStmt(self, ctx:mlangParser.BreakStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#continueStmt.
+    def visitContinueStmt(self, ctx:mlangParser.ContinueStmtContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mlangParser#expr.
     def visitExpr(self, ctx:mlangParser.ExprContext):
         return self.visitChildren(ctx)
