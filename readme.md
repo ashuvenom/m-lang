@@ -137,7 +137,7 @@ This generates the following files:
 
 ```bash
 cd src
-python3 main.py ../data/sample.mlang
+python3 main.py ../data/conditions.mlang
 ```
 
 ---
