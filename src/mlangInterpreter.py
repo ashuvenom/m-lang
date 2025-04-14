@@ -124,7 +124,12 @@ class mlangInterpreter(mlangVisitor):
             left = self.visit(ctx.expr(0))
             right = self.visit(ctx.expr(1)) if ctx.expr(1) else None
 
-            if ctx.op.text == '+': return left + right
+            if ctx.op.text == '+':
+             # String concatenation if either operand is a string
+                if isinstance(left, str) or isinstance(right, str):
+                    return str(left) + str(right)
+                return left + right
+            
             if ctx.op.text == '-': return left - right
             if ctx.op.text == '*': return left * right
             if ctx.op.text == '/': return left // right

@@ -1,6 +1,7 @@
 note: basic function call to add 2 numbers
 
-scene add with a, b action
+scene add with a, b 
+action
   wrap a + b;
 cut
 
@@ -10,7 +11,8 @@ say result;
 
 note: function with no parameters
 
-scene director action
+scene director 
+action
   wrap "Christopher Nolan";
 cut
 
@@ -19,12 +21,18 @@ say name;
 
 note: Function with Conditional Logic
 
-scene moodOf with hour action
-  cutIf hour smallerThan 12 action
+scene moodOf with hour 
+action
+  cutIf hour smallerThan 12 
+  action
     wrap "Fresh Morning";
-  cut altCut hour smallerThan 18 action
+  cut 
+  altCut hour smallerThan 18 
+  action
     wrap "Busy Afternoon";
-  cut plotTwist action
+  cut 
+  plotTwist 
+  action
     wrap "Cozy Night";
   cut
 cut
@@ -34,11 +42,13 @@ say mood;
 
 note: nested function calls
 
-scene add with x, y action
+scene add with x, y 
+action
   wrap x + y;
 cut
 
-scene double with n action
+scene double with n 
+action
   wrap call add with n, n;
 cut
 
@@ -49,7 +59,8 @@ note: Scope Isolation Test
 
 cast actor is "Tom";
 
-scene castActor with actor action
+scene castActor with actor 
+action
   say "Inside scene: " + actor;
   wrap actor;
 cut
