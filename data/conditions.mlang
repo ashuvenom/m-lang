@@ -39,3 +39,20 @@ montage cast j is 0; j smallerThan 5; j is j + 1; action
     cut
     say j;
 cut
+
+note: Multiple elifs
+
+cast rating is 3;
+
+cutIf rating biggerThan 8 action
+    say "Excellent";
+cut
+altCut rating biggerThan 5 action
+    say "Good";
+cut
+altCut rating biggerThan 2 action
+    say "Okay";
+cut
+plotTwist action
+    say "Needs improvement";
+cut
