@@ -46,9 +46,9 @@ def main():
 
     print(tree.toStringTree(recog=parser))  # console parse tree
 
-    # Construct output path in data/trees/
     base_name = os.path.splitext(os.path.basename(input_file_path))[0]
-    tree_dir = os.path.join("data", "trees")
+    project_root = os.path.dirname(os.path.dirname(__file__))  
+    tree_dir = os.path.join(project_root, "data", "trees")
     os.makedirs(tree_dir, exist_ok=True)
     output_file = os.path.join(tree_dir, f"{base_name}tree.png")
 

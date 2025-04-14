@@ -51,7 +51,6 @@ functionCall
     : functionCallExpr ';'
     ;
 
-// Function call as part of expression (e.g., in assignment or return)
 functionCallExpr
     : 'call' ID ('with' argList)?
     ;
