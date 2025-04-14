@@ -1,7 +1,17 @@
 cast x is 5;
 cast y is 8;
 
+cast budget is 4;
+cast maxBudget is 4;
+
+say x notSame y;
 say x smallerThan y;
 say x biggerThan y;
 say x biggerOrEqual y;
 say x smallerOrEqual y;
+
+say budget sameAs maxBudget;
+say budget smallerThan maxBudget;
+say budget biggerThan maxBudget;
+say budget biggerOrEqual maxBudget;
+say budget smallerOrEqual maxBudget;
