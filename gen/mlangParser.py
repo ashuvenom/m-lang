@@ -1,4 +1,4 @@
-# Generated from mlang.g4 by ANTLR 4.13.0
+# Generated from mlang.g4 by ANTLR 4.13.2
 # encoding: utf-8
 from antlr4 import *
 from io import StringIO
@@ -10,21 +10,21 @@ else:
 
 def serializedATN():
     return [
-        4,1,22,66,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,5,
+        4,1,19,66,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,1,0,5,
         0,14,8,0,10,0,12,0,17,9,0,1,0,1,0,1,1,1,1,1,1,3,1,24,8,1,1,2,1,2,
         1,2,1,2,1,2,1,2,1,3,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,4,1,5,1,5,1,5,
         1,5,1,5,1,5,3,5,47,8,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,5,1,
         5,1,5,5,5,61,8,5,10,5,12,5,64,9,5,1,5,0,1,10,6,0,2,4,6,8,10,0,4,
-        1,0,5,6,1,0,7,8,1,0,9,10,1,0,11,16,69,0,15,1,0,0,0,2,23,1,0,0,0,
+        1,0,5,6,1,0,7,8,1,0,9,10,1,0,11,14,69,0,15,1,0,0,0,2,23,1,0,0,0,
         4,25,1,0,0,0,6,31,1,0,0,0,8,36,1,0,0,0,10,46,1,0,0,0,12,14,3,2,1,
         0,13,12,1,0,0,0,14,17,1,0,0,0,15,13,1,0,0,0,15,16,1,0,0,0,16,18,
         1,0,0,0,17,15,1,0,0,0,18,19,5,0,0,1,19,1,1,0,0,0,20,24,3,4,2,0,21,
         24,3,6,3,0,22,24,3,8,4,0,23,20,1,0,0,0,23,21,1,0,0,0,23,22,1,0,0,
-        0,24,3,1,0,0,0,25,26,5,1,0,0,26,27,5,19,0,0,27,28,5,2,0,0,28,29,
-        3,10,5,0,29,30,5,3,0,0,30,5,1,0,0,0,31,32,5,19,0,0,32,33,5,2,0,0,
+        0,24,3,1,0,0,0,25,26,5,1,0,0,26,27,5,17,0,0,27,28,5,2,0,0,28,29,
+        3,10,5,0,29,30,5,3,0,0,30,5,1,0,0,0,31,32,5,17,0,0,32,33,5,2,0,0,
         33,34,3,10,5,0,34,35,5,3,0,0,35,7,1,0,0,0,36,37,5,4,0,0,37,38,3,
-        10,5,0,38,39,5,3,0,0,39,9,1,0,0,0,40,41,6,5,-1,0,41,42,5,17,0,0,
-        42,47,3,10,5,4,43,47,5,18,0,0,44,47,5,20,0,0,45,47,5,19,0,0,46,40,
+        10,5,0,38,39,5,3,0,0,39,9,1,0,0,0,40,41,6,5,-1,0,41,42,5,15,0,0,
+        42,47,3,10,5,4,43,47,5,16,0,0,44,47,5,18,0,0,45,47,5,17,0,0,46,40,
         1,0,0,0,46,43,1,0,0,0,46,44,1,0,0,0,46,45,1,0,0,0,47,62,1,0,0,0,
         48,49,10,8,0,0,49,50,7,0,0,0,50,61,3,10,5,9,51,52,10,7,0,0,52,53,
         7,1,0,0,53,61,3,10,5,8,54,55,10,6,0,0,55,56,7,2,0,0,56,61,3,10,5,
@@ -44,16 +44,15 @@ class mlangParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'cast'", "'is'", "';'", "'say'", "'*'", 
-                     "'/'", "'+'", "'-'", "'andAlso'", "'orElse'", "'sameAs'", 
-                     "'notSame'", "'smallerThan'", "'biggerThan'", "'biggerOrEqual'", 
-                     "'smallerOrEqual'", "'not'" ]
+                     "'/'", "'+'", "'-'", "'andAlso'", "'orElse'", "'smallerThan'", 
+                     "'greaterThan'", "'greaterThanOrEqualTo'", "'lessThanOrEqualTo'", 
+                     "'not'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "BOOL", "ID", "INT", "WS", 
-                      "COMMENT" ]
+                      "BOOL", "ID", "INT", "WS" ]
 
     RULE_program = 0
     RULE_statement = 1
@@ -81,17 +80,14 @@ class mlangParser ( Parser ):
     T__12=13
     T__13=14
     T__14=15
-    T__15=16
-    T__16=17
-    BOOL=18
-    ID=19
-    INT=20
-    WS=21
-    COMMENT=22
+    BOOL=16
+    ID=17
+    INT=18
+    WS=19
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
-        self.checkVersion("4.13.0")
+        self.checkVersion("4.13.2")
         self._interp = ParserATNSimulator(self, self.atn, self.decisionsToDFA, self.sharedContextCache)
         self._predicates = None
 
@@ -126,12 +122,6 @@ class mlangParser ( Parser ):
             if hasattr( listener, "exitProgram" ):
                 listener.exitProgram(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProgram" ):
-                return visitor.visitProgram(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -145,7 +135,7 @@ class mlangParser ( Parser ):
             self.state = 15
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 524306) != 0):
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 131090) != 0):
                 self.state = 12
                 self.statement()
                 self.state = 17
@@ -193,12 +183,6 @@ class mlangParser ( Parser ):
             if hasattr( listener, "exitStatement" ):
                 listener.exitStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -215,7 +199,7 @@ class mlangParser ( Parser ):
                 self.state = 20
                 self.variableDecl()
                 pass
-            elif token in [19]:
+            elif token in [17]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 21
                 self.assignStmt()
@@ -261,12 +245,6 @@ class mlangParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableDecl" ):
                 listener.exitVariableDecl(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDecl" ):
-                return visitor.visitVariableDecl(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -321,12 +299,6 @@ class mlangParser ( Parser ):
             if hasattr( listener, "exitAssignStmt" ):
                 listener.exitAssignStmt(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssignStmt" ):
-                return visitor.visitAssignStmt(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -374,12 +346,6 @@ class mlangParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitPrintStmt" ):
                 listener.exitPrintStmt(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrintStmt" ):
-                return visitor.visitPrintStmt(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -429,9 +395,6 @@ class mlangParser ( Parser ):
         def ID(self):
             return self.getToken(mlangParser.ID, 0)
 
-        def MOD(self):
-            return self.getToken(mlangParser.MOD, 0)
-
         def getRuleIndex(self):
             return mlangParser.RULE_expr
 
@@ -442,12 +405,6 @@ class mlangParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitExpr" ):
                 listener.exitExpr(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpr" ):
-                return visitor.visitExpr(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -464,21 +421,21 @@ class mlangParser ( Parser ):
             self.state = 46
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [17]:
+            if token in [15]:
                 self.state = 41
-                self.match(mlangParser.T__16)
+                self.match(mlangParser.T__14)
                 self.state = 42
                 self.expr(4)
                 pass
-            elif token in [18]:
+            elif token in [16]:
                 self.state = 43
                 self.match(mlangParser.BOOL)
                 pass
-            elif token in [20]:
+            elif token in [18]:
                 self.state = 44
                 self.match(mlangParser.INT)
                 pass
-            elif token in [19]:
+            elif token in [17]:
                 self.state = 45
                 self.match(mlangParser.ID)
                 pass
@@ -507,7 +464,7 @@ class mlangParser ( Parser ):
                         self.state = 49
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 1048672) != 0)):
+                        if not(_la==5 or _la==6):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
@@ -564,7 +521,7 @@ class mlangParser ( Parser ):
                         self.state = 58
                         localctx.op = self._input.LT(1)
                         _la = self._input.LA(1)
-                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 129024) != 0)):
+                        if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 30720) != 0)):
                             localctx.op = self._errHandler.recoverInline(self)
                         else:
                             self._errHandler.reportMatch(self)
