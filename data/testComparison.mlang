@@ -1,0 +1,7 @@
+cast x is 5;
+cast y is 10;
+
+say x smallerThan y;
+say x greaterThan y;
+say x greaterThanOrEqualTo y;
+say x lessThanOrEqualTo y;
