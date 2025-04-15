@@ -1,0 +1,12 @@
+cast enemyHealth is 100;
+cast attackPower is 40;
+
+say "Boss Health:" + enemyHealth;
+
+rollWhile enemyHealth biggerThan 0 action
+  say "Attacking with power: " + attackPower;
+  enemyHealth is enemyHealth - attackPower;
+
+  cast status is enemyHealth smallerOrEqual 0 cut? "Victory" plotTwist "Still fighting...";
+  say status;
+cut

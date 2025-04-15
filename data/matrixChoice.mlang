@@ -1,0 +1,14 @@
+note: The Oracle presents the choice
+cast pill is "red";
+
+cutIf pill sameAs "red" 
+action
+  say "You chose to know the truth.";
+cut 
+altCut pill sameAs "blue" 
+action
+  say "You chose comfort and illusion.";
+cut plotTwist 
+action
+  say "Indecision is also a choice.";
+cut

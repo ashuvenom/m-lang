@@ -1,0 +1,11 @@
+note: Assembling the Avengers
+
+scene assemble with count action
+  montage cast i is 1; i smallerOrEqual count; i is i + 1 ;
+  action
+    say "Hero " + i + " assembled.";
+  cut
+  wrap "All present.";
+cut
+
+say call assemble with 5;
