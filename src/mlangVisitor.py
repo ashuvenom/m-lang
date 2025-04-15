@@ -69,6 +69,36 @@ class mlangVisitor(ParseTreeVisitor):
         return self.visitChildren(ctx)
 
 
+    # Visit a parse tree produced by mlangParser#functionDecl.
+    def visitFunctionDecl(self, ctx:mlangParser.FunctionDeclContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#functionCall.
+    def visitFunctionCall(self, ctx:mlangParser.FunctionCallContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#functionCallExpr.
+    def visitFunctionCallExpr(self, ctx:mlangParser.FunctionCallExprContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#returnStmt.
+    def visitReturnStmt(self, ctx:mlangParser.ReturnStmtContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#paramList.
+    def visitParamList(self, ctx:mlangParser.ParamListContext):
+        return self.visitChildren(ctx)
+
+
+    # Visit a parse tree produced by mlangParser#argList.
+    def visitArgList(self, ctx:mlangParser.ArgListContext):
+        return self.visitChildren(ctx)
+
+
     # Visit a parse tree produced by mlangParser#expr.
     def visitExpr(self, ctx:mlangParser.ExprContext):
         return self.visitChildren(ctx)

@@ -1,0 +1,53 @@
+note: The Hero's Journey begins...
+
+cast hero is "Neo";
+cast level is 0;
+cast maxLevel is 3;
+
+note: Level-up montage
+montage cast i is 1; i smallerOrEqual maxLevel; i is i + 1;
+action
+  say hero + " reaches level " + i;
+  level is level + 1;
+cut
+
+note: Decision point -- what's happening?
+cutIf level biggerOrEqual 3 
+action
+  say "The Oracle appears.";
+cut altCut level sameAs 2 
+action
+  say "Agent Smith intercepts!";
+cut plotTwist 
+action
+  say "Still trapped in the Matrix.";
+cut
+
+note: Define a function to simulate training
+scene train with powerLevel 
+action
+  rollWhile powerLevel smallerThan 100 
+  action
+    say "Training...";
+    powerLevel is powerLevel + 25;
+
+    cutIf powerLevel sameAs 75 action
+      say "He's beginning to believe.";
+    cut
+
+  cut
+  wrap powerLevel;
+cut
+
+cast finalPower is call train with 25;
+
+note: Final reveal
+cutIf finalPower biggerOrEqual 100 
+action
+  say hero + " is The One.";
+cut plotTwist 
+action
+  say hero + " is not ready... yet.";
+cut
+
+note: End credits

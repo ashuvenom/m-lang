@@ -6,6 +6,8 @@ class ContinueSignal(Exception): pass
 class mlangInterpreter(mlangVisitor):
     def __init__(self):
         self.memory = {}
+        self.functions = {}
+        self.return_value = None
 
     def visitProgram(self, ctx):
         for stmt in ctx.statement():
@@ -69,20 +71,65 @@ class mlangInterpreter(mlangVisitor):
     def visitContinueStmt(self, ctx):
         raise ContinueSignal()
 
+    def visitFunctionDecl(self, ctx):
+        name = ctx.ID().getText()
+        params = [p.getText() for p in ctx.paramList().ID()] if ctx.paramList() else []
+        body = ctx.statement()
+        self.functions[name] = (params, body)
+
+    def visitFunctionCall(self, ctx):
+        return self.visitFunctionCallExpr(ctx.functionCallExpr())
+
+    def visitFunctionCallExpr(self, ctx):
+        name = ctx.ID().getText()
+        if name not in self.functions:
+            raise Exception(f"Function '{name}' not defined.")
+
+        params, body = self.functions[name]
+        args = [self.visit(arg) for arg in ctx.argList().expr()] if ctx.argList() else []
+
+        if len(params) != len(args):
+            raise Exception(f"Function '{name}' expects {len(params)} args, got {len(args)}.")
+
+        outer_memory = self.memory.copy()
+        self.memory = dict(zip(params, args))
+
+        self.return_value = None
+        for stmt in body:
+            self.visit(stmt)
+            if self.return_value is not None:
+                break
+
+        result = self.return_value
+        self.memory = outer_memory
+        self.return_value = None
+        return result
+
+    def visitReturnStmt(self, ctx):
+        self.return_value = self.visit(ctx.expr())
+
     def visitExpr(self, ctx):
+        if ctx.functionCallExpr():
+            return self.visitFunctionCallExpr(ctx.functionCallExpr())
+
         if ctx.INT():
             return int(ctx.INT().getText())
         elif ctx.BOOL():
             return ctx.BOOL().getText() == 'truth'
         elif ctx.STRING():
-            return ctx.STRING().getText()[1:-1]  # Remove the quotes
+            return ctx.STRING().getText()[1:-1]
         elif ctx.ID():
             return self.memory.get(ctx.ID().getText(), 0)
         elif ctx.op:
             left = self.visit(ctx.expr(0))
             right = self.visit(ctx.expr(1)) if ctx.expr(1) else None
 
-            if ctx.op.text == '+': return left + right
+            if ctx.op.text == '+':
+             # String concatenation if either operand is a string
+                if isinstance(left, str) or isinstance(right, str):
+                    return str(left) + str(right)
+                return left + right
+            
             if ctx.op.text == '-': return left - right
             if ctx.op.text == '*': return left * right
             if ctx.op.text == '/': return left // right
@@ -105,6 +152,5 @@ class mlangInterpreter(mlangVisitor):
             else:
                 return false_expr
         elif ctx.getChild(0).getText() == 'not':
-            value = self.visit(ctx.expr(0))
-            return not value
+            return not self.visit(ctx.expr(0))
         return 0

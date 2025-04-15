@@ -11,6 +11,9 @@ statement
     | forStmt
     | breakStmt
     | continueStmt
+    | functionDecl
+    | functionCall       
+    | returnStmt
     ;
 
 variableDecl: 'cast' ID 'is' expr ';';
@@ -40,6 +43,25 @@ forStmt
 breakStmt: 'pause' ';';
 continueStmt: 'replay' ';';
 
+functionDecl
+    : 'scene' ID ('with' paramList)? 'action' statement* 'cut'
+    ;
+
+functionCall
+    : functionCallExpr ';'
+    ;
+
+functionCallExpr
+    : 'call' ID ('with' argList)?
+    ;
+
+returnStmt
+    : 'wrap' expr ';'
+    ;
+
+paramList: ID (',' ID)*;
+argList: expr (',' expr)*;
+
 expr
     : expr op=('*'|'/'|'%') expr
     | expr op=('+'|'-') expr
@@ -47,6 +69,7 @@ expr
     | expr op=('sameAs'|'notSame'|'smallerThan'|'biggerThan'|'biggerOrEqual'|'smallerOrEqual') expr
     | expr 'cut?' expr 'plotTwist' expr  
     | 'not' expr
+    | functionCallExpr
     | BOOL
     | INT
     | STRING

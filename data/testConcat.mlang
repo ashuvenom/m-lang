@@ -1,0 +1,13 @@
+note: Testing string + int concatenation
+
+cast hero is "Neo";
+cast level is 2;
+cast message is hero + " is at level " + level;
+
+say message;
+
+cast x is "Hello";
+cast y is 42;
+cast z is x + " world " + y;
+
+say z;
