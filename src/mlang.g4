@@ -67,6 +67,7 @@ expr
     | expr op=('+'|'-') expr
     | expr op=('andAlso'|'orElse') expr
     | expr op=('sameAs'|'notSame'|'smallerThan'|'biggerThan'|'biggerOrEqual'|'smallerOrEqual') expr
+    | expr 'cut?' expr 'plotTwist' expr  
     | 'not' expr
     | functionCallExpr
     | BOOL
