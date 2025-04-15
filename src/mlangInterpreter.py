@@ -94,7 +94,16 @@ class mlangInterpreter(mlangVisitor):
             if ctx.op.text == 'smallerThan': return left < right
             if ctx.op.text == 'biggerThan': return left > right
             if ctx.op.text == 'biggerOrEqual': return left >= right
-            if ctx.op.text == 'smallerOrEqual': return left <= right    
+            if ctx.op.text == 'smallerOrEqual': return left <= right
+        elif ctx.getChildCount() == 5 and ctx.getChild(1).getText() == 'cut?':
+            condition = self.visit(ctx.expr(0))
+            true_expr = self.visit(ctx.expr(1))
+            false_expr = self.visit(ctx.expr(2))
+            # print(f"DEBUG: condition={condition}, true_expr={true_expr}, false_expr={false_expr}")  
+            if bool(condition):  
+                return true_expr
+            else:
+                return false_expr
         elif ctx.getChild(0).getText() == 'not':
             value = self.visit(ctx.expr(0))
             return not value

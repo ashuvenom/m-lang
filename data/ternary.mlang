@@ -1,0 +1,3 @@
+cast score is 85;
+cast result is score biggerOrEqual 90 cut? "Excellent" plotTwist "Good";
+say result;
