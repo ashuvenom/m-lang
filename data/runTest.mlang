@@ -1,0 +1,86 @@
+note: Test Framework in MLang
+
+scene assertEqual with actual, expected, testName
+action
+  cutIf actual sameAs expected action
+    say testName + ": PASSED";
+  cut plotTwist
+    say testName + ": FAILED (Expected: " + expected + ", Got: " + actual + ")";
+  cut
+cut
+
+scene assertTrue with condition, testName
+action
+  cutIf condition action
+    say testName + ": PASSED";
+  cut plotTwist
+    say testName + ": FAILED (Expected: truth, Got: lie)";
+  cut
+cut
+
+scene assertFalse with condition, testName
+action
+  cutIf not condition action
+    say testName + ": PASSED";
+  cut plotTwist
+    say testName + ": FAILED (Expected: lie, Got: truth)";
+  cut
+cut
+
+note: Test Cases
+
+note: Test Arithmetic
+cast result is 5 + 3;
+call assertEqual with result, 8, "Test Addition";
+
+cast result is 10 - 4;
+call assertEqual with result, 6, "Test Subtraction";
+
+cast result is 3 * 4;
+call assertEqual with result, 12, "Test Multiplication";
+
+cast result is 8 / 2;
+call assertEqual with result, 4, "Test Division";
+
+note: Test Boolean Logic
+call assertTrue with truth andAlso truth, "Test AND (truth andAlso truth)";
+call assertFalse with truth andAlso lie, "Test AND (truth andAlso lie)";
+call assertTrue with truth orElse lie, "Test OR (truth orElse lie)";
+call assertFalse with lie orElse lie, "Test OR (lie orElse lie)";
+call assertTrue with not lie, "Test NOT (not lie)";
+call assertFalse with not truth, "Test NOT (not truth)";
+
+note: Test Comparison Operators
+call assertTrue with 5 smallerThan 8, "Test Smaller Than";
+call assertFalse with 8 smallerThan 5, "Test Smaller Than (False)";
+call assertTrue with 8 biggerThan 5, "Test Bigger Than";
+call assertFalse with 5 biggerThan 8, "Test Bigger Than (False)";
+call assertTrue with 5 sameAs 5, "Test Same As";
+call assertFalse with 5 notSame 5, "Test Not Same (False)";
+call assertTrue with 5 smallerOrEqual 5, "Test Smaller Or Equal";
+call assertTrue with 5 biggerOrEqual 5, "Test Bigger Or Equal";
+
+note: Test String Concatenation
+cast message is "Hello" + " World";
+call assertEqual with message, "Hello World", "Test String Concatenation";
+
+note: Test Modulo
+cast result is 10 % 3;
+call assertEqual with result, 1, "Test Modulo";
+
+note: Test Ternary Operator
+cast score is 85;
+cast result is score biggerOrEqual 90 cut? "Excellent" plotTwist "Good";
+call assertEqual with result, "Good", "Test Ternary Operator";
+
+note: Test If-Else
+cast hero is 10;
+cast villain is 10;
+
+cutIf hero sameAs villain action
+    call assertTrue with truth, "Test If-Else (Same)";
+cut altCut hero biggerThan villain action
+    call assertFalse with truth, "Test If-Else (Hero Bigger)";
+cut plotTwist action
+    call assertFalse with truth, "Test If-Else (Unexpected)";
+cut
