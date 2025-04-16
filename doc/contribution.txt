@@ -1,8 +1,24 @@
+Contributions (Milestone 1 + Milestone 2)
 
-Ashutosh Milestone 1 + Milestone 2
+Ashutosh Kumbhar 
+1. Set up the project structure and GitHub repository, including configuration for version control, issue tracking, and collaboration workflows.  
+2. Contributed to designing the grammar (⁠ mlang.g4 ⁠) by adding support for custom syntax, including logical operators, comparison operators, and control structures.  
+3. Designed and implemented core language features, including boolean logic, comparison operators, and arithmetic operations, ensuring Python-like behavior.
+4. Developed a JUnit-like testing script in MLang to validate language features with clear pass (✅) and fail (❌) outputs.
 
-1) Set up the project structure and GitHub repository, including configuration for version control, issue tracking, and collaboration workflows.  
-2) Contributed to designing the grammar (⁠ mlang.g4 ⁠) by adding support for custom syntax, including logical operators, comparison operators, and control structures.  
-3) Designed and implemented core language features, including boolean logic, comparison operators, and arithmetic operations, ensuring Python-like behavior.
-4) Developed a JUnit-like testing script in MLang to validate language features with clear pass (✅) and fail (❌) outputs.
+Girish Nalawade
+1. Created the initial working skeleton of the project using ANTLR and Python, setting up the foundational lexer, parser, and interpreter structure.  
+2. Extended language functionality to support ⁠ String ⁠ values, including parsing, evaluation, and integration with expressions and print statements.  
+3. Enhanced support for control flow by implementing conditional operators (⁠ cutIf ⁠, ⁠ altCut ⁠, ⁠ plotTwist ⁠) and loop constructs (⁠ montage ⁠ for ⁠ for ⁠ loops and ⁠ rollWhile ⁠ for ⁠ while ⁠ loops), ensuring correct execution logic.
 
+Mitesh Parab
+1. Organized and formatted the project's README to clearly present its purpose, setup instructions, and usage details.
+2.⁠ Contributed to designing the grammar (mlang.g4) by adding support for custom syntax, including logical operators, comparison operators, and control structures.
+3. Added support for the modulo (%) operator in the language's syntax and evaluation logic.
+4.⁠ ⁠Introduced the ternary conditional operator to enable concise conditional expressions.
+
+Rajesh Sawant
+1. Authored the Mlang design and specification document, including grammar (EBNF & ANTLR), language features, keyword taxonomy, and cinematic code examples.
+2. Designed Mlang’s grammar structure (mlang.g4), implementing constructs for control flow, expressions, functions, strings, and comparison/equality operators using cinematic keywords.
+3. Implemented interpreter logic for function calls, variable scoping, string concatenation, and operators like sameAs and notSame.
+4. Developed the parse tree visualization pipeline using Graphviz and pydot, and created a wide range of cinematic test programs to validate grammar and runtime behavior.
