@@ -1,0 +1,8 @@
+
+Ashutosh
+
+1) Set up the project structure and GitHub repository, including configuration for version control, issue tracking, and collaboration workflows.  
+2) Contributed to designing the grammar (⁠ mlang.g4 ⁠) by adding support for custom syntax, including logical operators, comparison operators, and control structures.  
+3) Designed and implemented core language features, including boolean logic, comparison operators, and arithmetic operations, ensuring Python-like behavior.
+4) Developed a JUnit-like testing script in MLang to validate language features with clear pass (✅) and fail (❌) outputs.
+
