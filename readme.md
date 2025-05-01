@@ -89,17 +89,52 @@ sudo apt install default-jre python3-pip -y
 pip install antlr4-python3-runtime
 ```
 
-### Windows (via WSL)
+### Windows (Graphviz)
+
+---
+
+### 1. Download Graphviz
+
+* Visit the official Graphviz website:
+  [https://graphviz.org/download/](https://graphviz.org/download/)
+* Download the EXE installer for Windows and run the installation.
+
+### 2. Add Graphviz to System PATH
+
+* Add the following directory to your system's **Environment Variables** → **Path**:
+
+  ```
+  C:\Program Files\Graphviz\bin
+  ```
+* This allows Graphviz commands like `dot` to be accessible from the terminal.
+
+### 3. Install Required Python Packages
+
+Open Command Prompt and run:
 
 ```bash
-wsl --install
-# Then inside Ubuntu terminal:
-sudo apt update
-sudo apt install graphviz
-sudo apt install default-jre python3-pip -y
-pip install antlr4-python3-runtime
+pip install antlr4-python3-runtime pydot
 ```
 
+### 4. Verify Graphviz Installation
+
+In the terminal, check if Graphviz was installed correctly:
+
+```bash
+dot -V
+```
+
+You should see the installed version of Graphviz printed.
+
+### 5. Run Your Python Program
+
+Navigate to your project directory and run:
+
+```bash
+python main.py ../data/conditions.mlang
+```
+
+---
 ### MacOS (requires Homebrew)
 
 ```bash
@@ -138,5 +173,9 @@ This generates the following files:
 cd src
 python3 main.py ../data/conditions.mlang
 ```
+## Runnig Program on windos
 
+```bash
+python main.py ../data/conditions.mlang
+```
 ---
