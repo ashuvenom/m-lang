@@ -99,7 +99,7 @@ pip install antlr4-python3-runtime
   [https://graphviz.org/download/](https://graphviz.org/download/)
 * Download the EXE installer for Windows and run the installation.
 
-### 2. Add Graphviz to System PATH
+### 2. Add Graphviz to the System PATH
 
 * Add the following directory to your system's **Environment Variables** → **Path**:
 
@@ -173,7 +173,7 @@ This generates the following files:
 cd src
 python3 main.py ../data/conditions.mlang
 ```
-## Runnig Program on windos
+## Running Program on Windows
 
 ```bash
 python main.py ../data/conditions.mlang
