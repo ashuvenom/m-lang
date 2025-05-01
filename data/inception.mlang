@@ -1,0 +1,36 @@
+note: Dream Team Setup
+cast architect is "Ariadne";
+cast extractor is "Cobb";
+cast chemist is "Yusuf";
+cast dreamDepth is 0;
+
+note: Recursive dream layering function
+scene dreamLayer with depth action
+  say "Entering dream level " + depth;
+  
+  cutIf depth biggerOrEqual 3 action
+    say "Limbo reached. Stability compromised!";
+    wrap "limbo";
+  cut
+
+  cast nextDepth is depth + 1;
+  cast result is call dreamLayer with nextDepth;
+
+  say "Exiting dream level " + depth;
+  wrap result;
+cut
+
+note: Begin dream infiltration
+cast finalState is call dreamLayer with 0;
+
+say "Final State: " + finalState;
+
+note: Totem check
+cast totemSpinTime is 10;
+
+cutIf totemSpinTime biggerThan 5
+  cut? "still dreaming..."
+  plotTwist "back to reality"
+as conclusion;
+
+say extractor + "'s reality: " + conclusion;

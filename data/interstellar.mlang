@@ -1,0 +1,43 @@
+note: Opening scene
+cast pilot is "Cooper";
+cast daughter is "Murph";
+cast missionStatus is "pending";
+cast yearsPassed is 0;
+
+say pilot + " leaves Earth to find a new home.";
+
+note: Time dilation loop near Gargantua
+montage cast i is 1; i smallerOrEqual 5; i is i + 1 action
+  say "Orbiting near Gargantua...";
+  yearsPassed is yearsPassed + 7;
+cut
+
+say "Back on Earth, " + daughter + " waits and waits...";
+say "Years passed: " + yearsPassed;
+
+note: Emotional communication
+cutIf yearsPassed biggerOrEqual 23 action
+  say daughter + " feels abandoned.";
+cut plotTwist action
+  say daughter + " still hopes.";
+cut
+
+note: Define function to attempt wormhole navigation
+scene enterWormhole with chance action
+  cutIf chance biggerThan 80 action
+    say "Wormhole stable! Proceeding...";
+    wrap "success";
+  cut plotTwist action
+    say "Wormhole collapses!";
+    wrap "failure";
+  cut
+cut
+
+cast result is call enterWormhole with 85;
+
+note: Final outcome
+cutIf result sameAs "success" action
+  say pilot + " reunites with " + daughter + ". Humanity has hope.";
+cut plotTwist action
+  say pilot + " vanishes beyond dimensions. Only echoes remain.";
+cut

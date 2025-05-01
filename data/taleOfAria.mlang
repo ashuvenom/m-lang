@@ -1,0 +1,41 @@
+note: Opening scene
+cast hero is "Aria";
+cast level is 1;
+cast destiny is "unknown";
+
+say hero + " awakens in the mist.";
+
+note: Training montage
+montage cast i is 1; i smallerOrEqual 3; i is i + 1 action
+  say hero + " trains for day " + i;
+  level is level + 1;
+cut
+
+note: Reveal the prophecy
+cutIf level biggerOrEqual 4 action
+  say "The elders whisper: She is The One.";
+  destiny is "chosen";
+cut plotTwist action
+  say "Her path remains unclear.";
+  destiny is "uncertain";
+cut
+
+note: Call to battle
+scene battle with power action
+  rollWhile power smallerThan 100 action
+    say "Fighting the shadows...";
+    power is power + 25;
+
+    cutIf power sameAs 75 action
+      say "Aria channels the ancient force.";
+    cut
+
+  cut
+  wrap power;
+cut
+
+cast finalPower is call battle with 25;
+
+note: Final judgment
+cast outcome is finalPower biggerOrEqual 100 cut? "Victory!" plotTwist "Defeat...";
+say hero + "'s final fate: " + outcome;
