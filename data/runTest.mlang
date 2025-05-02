@@ -94,6 +94,25 @@ cut plotTwist action
     call assertFalse with truth, "Test If-Else (Unexpected)";
 cut
 
+note: Fibonacci Function
+
+scene fib with n action
+    cutIf n sameAs 1 action
+        wrap 1;
+    cut
+    altCut n sameAs 2 action
+        wrap 1;
+    cut
+    cast a is call fib with n - 1;
+    cast b is call fib with n - 2;
+    wrap a + b;
+cut
+
+note: Single Fibonacci Test Case
+
+cast f is call fib with 7;
+call assertEqual with f, 13, "Test Fibonacci";
+
 
 note: Test Recursion
 cast result is call multiply with 5;
@@ -131,5 +150,6 @@ cut
 
 cast sumResult is call sumUpTo with 10;
 call assertEqual with sumResult, 55, "Test Sum from 1 to 10";
+
 
 
