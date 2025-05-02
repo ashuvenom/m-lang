@@ -84,3 +84,34 @@ cut altCut hero biggerThan villain action
 cut plotTwist action
     call assertFalse with truth, "Test If-Else (Unexpected)";
 cut
+
+
+note: Test Factorial Calculation
+scene factorial with n 
+action
+  cutIf n sameAs 0 action
+    wrap 1;
+  cut
+  plotTwist action
+    wrap n * call factorial with n - 1;
+  cut
+cut
+
+cast number is 5;
+cast result is call factorial with number;
+call assertEqual with result, 120, "Test Factorial of 5";
+
+note: Recursive Sum from 1 to 10
+scene sumUpTo with n 
+action
+  cutIf n sameAs 0 action
+    wrap 0;
+  cut
+  plotTwist action
+    wrap n + call sumUpTo with n - 1;
+  cut
+cut
+
+cast sumResult is call sumUpTo with 10;
+call assertEqual with sumResult, 55, "Test Sum from 1 to 10";
+
