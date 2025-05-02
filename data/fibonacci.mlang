@@ -1,0 +1,20 @@
+scene fib with n action
+    cutIf n sameAs 1 action
+        wrap 1;
+    cut
+    altCut n sameAs 2 action
+        wrap 1;
+    cut
+    cast a is call fib with n - 1;
+    cast b is call fib with n - 2;
+    wrap a + b;
+cut
+
+scene main action
+    cast i is 1;
+    montage cast i is 1; i smallerOrEqual 10; i is i + 1; action
+        say "fib(" + i + ") = " + call fib with i;
+    cut
+cut
+
+call main;
