@@ -1,0 +1,16 @@
+note: Factorial Calculation in MLang
+
+scene factorial with n 
+action
+  cutIf n sameAs 0 action
+    wrap 1;
+  cut
+  plotTwist action
+    wrap n * call factorial with n - 1;
+  cut
+cut
+
+note: Test Factorial Calculation
+cast number is 5;
+cast result is call factorial with number;
+say "Factorial of " + number + " is " + result;

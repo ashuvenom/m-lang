@@ -1,0 +1,10 @@
+scene multiply with n action
+    cutIf n sameAs 1 action
+        wrap 1;
+    cut
+    plotTwist action
+        wrap n * call multiply with n - 1;
+    cut
+cut
+
+say call multiply with 10;
